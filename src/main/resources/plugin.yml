@@ -1,0 +1,8 @@
+name: MyFirstPlugin-MC
+version: '${project.version}'
+main: me.naicriz.myfirstplugin.MyFirstPlugin_MC
+api-version: '1.20'
+prefix: Nai.Co
+authors: [Naicriz]
+description: Primer plugin que forja el camino para realizar mis ideas.
+website: https://github.com/Naicriz
