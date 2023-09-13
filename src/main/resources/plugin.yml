@@ -6,3 +6,8 @@ prefix: Nai.Co
 authors: [Naicriz]
 description: Primer plugin que forja el camino para realizar mis ideas.
 website: https://github.com/Naicriz
+commands:
+  morir:
+    description: Eutonasia :)
+    usage: /<Command>
+    aliases: [ matar, suicidio ]

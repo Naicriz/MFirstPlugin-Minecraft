@@ -1,5 +1,6 @@
 package me.naicriz.myfirstplugin;
 
+import me.naicriz.myfirstplugin.commands.CommandsPartOne;
 import me.naicriz.myfirstplugin.listeners.ShearSheepListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.naicriz.myfirstplugin.listeners.PlayerListeners;
@@ -15,6 +16,8 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
+
+        getCommand("morir").setExecutor(new CommandsPartOne());
     }
 
     @Override
