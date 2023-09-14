@@ -7,7 +7,15 @@ authors: [Naicriz]
 description: Primer plugin que forja el camino para realizar mis ideas.
 website: https://github.com/Naicriz
 commands:
-  morir:
+  die:
     description: Eutonasia :)
     usage: /<Command>
     aliases: [ matar, suicidio ]
+  god:
+    description: Te vuelves inmortal.
+    usage: /<Command>
+    aliases: [ dios, inmortal ]
+  feed:
+    description: Te alimentas.
+    usage: /<Command>
+    aliases: [ comer, alimentar ]
