@@ -19,3 +19,7 @@ commands:
     description: Te alimentas.
     usage: /<Command>
     aliases: [ comer, alimentar ]
+  fairyfly:
+    description: Vuelas como una hada.
+    usage: /<Command>
+    aliases: [ hada, volar ]

@@ -1,6 +1,7 @@
 package me.naicriz.myfirstplugin;
 
 import me.naicriz.myfirstplugin.commands.Commands_PartOne;
+import me.naicriz.myfirstplugin.commands.FairyFlyCommand;
 import me.naicriz.myfirstplugin.commands.FeedCommand_PartTwo;
 import me.naicriz.myfirstplugin.commands.GodCommand_PartTwo;
 import me.naicriz.myfirstplugin.listeners.ShearSheepListener;
@@ -26,6 +27,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("die").setExecutor(new Commands_PartOne());
         getCommand("god").setExecutor((new GodCommand_PartTwo()));
         getCommand("feed").setExecutor((new FeedCommand_PartTwo()));
+        getCommand("fairyfly").setExecutor((new FairyFlyCommand()));
     }
 
 
