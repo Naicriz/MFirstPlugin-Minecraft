@@ -13,7 +13,9 @@ public class XPBottleBreakListener implements Listener {
     public void onXPBottleBreak(ExpBottleEvent event){
         event.setShowEffect(false);
         event.setExperience(0);
+
         Block block = event.getEntity().getLocation().getBlock();
-        block.getWorld().createExplosion(block.getLocation(), 20);
+
+        block.getWorld().createExplosion(block.getLocation(), 10);
     }
 }
