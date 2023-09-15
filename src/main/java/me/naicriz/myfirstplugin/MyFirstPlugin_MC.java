@@ -1,12 +1,7 @@
 package me.naicriz.myfirstplugin;
 
+import me.naicriz.myfirstplugin.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import me.naicriz.myfirstplugin.commands.TestPermCommand;
-import me.naicriz.myfirstplugin.commands.DieCommand_PartOne;
-import me.naicriz.myfirstplugin.commands.FeedCommand_PartTwo;
-import me.naicriz.myfirstplugin.commands.GodCommand_PartTwo;
-import me.naicriz.myfirstplugin.commands.FairyFlyCommand;
 
 import me.naicriz.myfirstplugin.listeners.DeathListener;
 import me.naicriz.myfirstplugin.listeners.ShearSheepListener;
@@ -42,6 +37,8 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("feed").setExecutor(new FeedCommand_PartTwo());
         getCommand("fairyfly").setExecutor(new FairyFlyCommand());
         getCommand("testperm").setExecutor(new TestPermCommand());
+        getCommand("cmdargs").setExecutor(new CommandArguments());
+
     }
 
 

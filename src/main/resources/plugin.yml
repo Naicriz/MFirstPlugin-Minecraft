@@ -27,7 +27,10 @@ commands:
     description: Test children permission.
     usage: /<Command>
     aliases: [ testpermisosychildren ]
-
+  cmdargs:
+    description: Test command arguments.
+    usage: /<Command> <arg1> <arg2> <arg3>
+    aliases: [ testargumentos ]
 permissions:
   myfirstplugin.test:
     description: Test children permission.
