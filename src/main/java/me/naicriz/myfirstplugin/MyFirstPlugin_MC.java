@@ -4,10 +4,15 @@ import me.naicriz.myfirstplugin.commands.Commands_PartOne;
 import me.naicriz.myfirstplugin.commands.FairyFlyCommand;
 import me.naicriz.myfirstplugin.commands.FeedCommand_PartTwo;
 import me.naicriz.myfirstplugin.commands.GodCommand_PartTwo;
+import me.naicriz.myfirstplugin.listeners.DeathListener;
 import me.naicriz.myfirstplugin.listeners.ShearSheepListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.naicriz.myfirstplugin.listeners.PlayerListeners;
 import me.naicriz.myfirstplugin.listeners.XPBottleBreakListener;
+
+/* Methods to register an event listener class to the server plugin manager */
+// 1. static getter method to acces plugin instance.
+// 2. constructor injection(using a constructor to pass the plugin instance to the listener class).
 
 public final class MyFirstPlugin_MC extends JavaPlugin {
 
@@ -23,6 +28,9 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
+
+        // This is the second way to register an event listener class to the server plugin manager.
+        getServer().getPluginManager().registerEvents(new DeathListener(this), this);
 
         getCommand("die").setExecutor(new Commands_PartOne());
         getCommand("god").setExecutor((new GodCommand_PartTwo()));
