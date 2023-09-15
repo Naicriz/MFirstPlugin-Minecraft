@@ -18,6 +18,6 @@ public class DeathListener implements Listener {
     }
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        event.setDeathMessage("El jugador " + event.getEntity().getName() + ".");
+        event.setDeathMessage("El jugador " + event.getEntity().getName() + "ha muerto. RIP PEPERONNI");
     }
 }

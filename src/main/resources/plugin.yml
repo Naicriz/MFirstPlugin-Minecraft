@@ -29,28 +29,28 @@ commands:
     aliases: [ testpermisosychildren ]
 
 permissions:
-  MyFirstPlugin.test:
+  myfirstplugin.test:
     description: Test children permission.
-    permission: MyFirstPlugin.test
+    permission: myfirstplugin.test
     default: false
     children:
-      MyFirstPlugin.die: true
-      MyFirstPlugin.god: true
-      MyFirstPlugin.feed: true
-      MyFirstPlugin.fairyfly: true
-  MyFirstPlugin.die:
+      myfirstplugin.die: true
+      myfirstplugin.god: true
+      myfirstplugin.feed: true
+      myfirstplugin.fairyfly: true
+  myfirstplugin.die:
     description: Permite al usuario ejecutar el comando /morir.
-    permission: MyFirstPlugin.die
+    permission: myfirstplugin.die
     default: op
-  MyFirstPlugin.god:
+  myfirstplugin.god:
     description: Permite al usuario ejecutar el comando /dios.
-    permission: MyFirstPlugin.god
+    permission: myfirstplugin.god
     default: false
-  MyFirstPlugin.feed:
+  myfirstplugin.feed:
     description: Permite al usuario ejecutar el comando /comer.
-    permission: MyFirstPlugin.feed
+    permission: myfirstplugin.feed
     default: false
-  MyFirstPlugin.fairyfly:
+  myfirstplugin.fairyfly:
     description: Permite al usuario ejecutar el comando /hada.
-    permission: MyFirstPlugin.fairyfly
+    permission: myfirstplugin.fairyfly
     default: false
