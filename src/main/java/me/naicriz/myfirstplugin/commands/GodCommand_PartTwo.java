@@ -14,7 +14,6 @@ public class GodCommand_PartTwo implements CommandExecutor {
         // God - Hace inmortal al jugador que ejecuta el comando.
         if (sender instanceof Player player) {
 
-            // Player player = (Player) sender;
             if (player.isInvulnerable()) {
                 player.setInvulnerable(false);
                 player.sendMessage(ChatColor.RED + "Modo dios desactivado.");

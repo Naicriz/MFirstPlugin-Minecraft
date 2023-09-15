@@ -10,7 +10,7 @@ commands:
   die:
     description: Eutonasia :)
     usage: /<Command>
-    aliases: [ matar, suicidio ]
+    aliases: [ morir, suicidio ]
   god:
     description: Te vuelves inmortal.
     usage: /<Command>
@@ -23,3 +23,34 @@ commands:
     description: Vuelas como una hada.
     usage: /<Command>
     aliases: [ hada, volar ]
+  testperm:
+    description: Test children permission.
+    usage: /<Command>
+    aliases: [ testpermisosychildren ]
+
+permissions:
+  MyFirstPlugin.test:
+    description: Test children permission.
+    permission: MyFirstPlugin.test
+    default: false
+    children:
+      MyFirstPlugin.die: true
+      MyFirstPlugin.god: true
+      MyFirstPlugin.feed: true
+      MyFirstPlugin.fairyfly: true
+  MyFirstPlugin.die:
+    description: Permite al usuario ejecutar el comando /morir.
+    permission: MyFirstPlugin.die
+    default: op
+  MyFirstPlugin.god:
+    description: Permite al usuario ejecutar el comando /dios.
+    permission: MyFirstPlugin.god
+    default: false
+  MyFirstPlugin.feed:
+    description: Permite al usuario ejecutar el comando /comer.
+    permission: MyFirstPlugin.feed
+    default: false
+  MyFirstPlugin.fairyfly:
+    description: Permite al usuario ejecutar el comando /hada.
+    permission: MyFirstPlugin.fairyfly
+    default: false

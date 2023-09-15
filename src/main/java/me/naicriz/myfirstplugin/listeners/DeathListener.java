@@ -1,11 +1,9 @@
 package me.naicriz.myfirstplugin.listeners;
 
 import me.naicriz.myfirstplugin.MyFirstPlugin_MC;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
-
 
 public class DeathListener implements Listener {
 
@@ -19,8 +17,7 @@ public class DeathListener implements Listener {
         this.pluginMethodTwo = pluginMethodTwo;
     }
     @EventHandler
-    public boolean onPlayerDeath(PlayerDeathEvent event) {
-        event.setDeathMessage("El jugador " + event.getEntity().getName() + " ha muerto a causa de " + event.getEntity() + ".");
-    return true;
+    public void onPlayerDeath(PlayerDeathEvent event) {
+        event.setDeathMessage("El jugador " + event.getEntity().getName() + ".");
     }
 }
