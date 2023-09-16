@@ -19,8 +19,10 @@ public class FartCommand implements CommandExecutor {
                 player.sendMessage("Eres asqueroso. Te cagaste encima y moriste a causa de ello.");
                 player.setHealth(0.0);
             } else {
-                String playerName = args[0]; // "naicriz"
-                Player targetPlayer = getServer().getPlayerExact(playerName); // Player object
+                // This is the first argument passed to the command so it's the player name
+                String playerName = args[0];
+                // This is the player object that we want to target to do whatever we want to do.
+                Player targetPlayer = getServer().getPlayerExact(playerName);
 
                 if(targetPlayer == null) {
                     player.sendMessage("El jugador no existe o no está en línea.");

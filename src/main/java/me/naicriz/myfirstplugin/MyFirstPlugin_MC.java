@@ -24,6 +24,10 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         // System.out.println("My first plugin has been initiated!");
         getLogger().info("MyFirstPlugin has been initiated!");
 
+        //config.yml
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         // Registering the event listener class to the server plugin manager, so it can listen to events and execute the code.
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
