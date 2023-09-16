@@ -38,6 +38,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("fairyfly").setExecutor(new FairyFlyCommand());
         getCommand("testperm").setExecutor(new TestPermCommand());
         getCommand("cmdargs").setExecutor(new CommandArguments());
+        getCommand("fart").setExecutor(new FartCommand());
 
     }
 

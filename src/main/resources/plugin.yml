@@ -31,6 +31,10 @@ commands:
     description: Test command arguments.
     usage: /<Command> <arg1> <arg2> <arg3>
     aliases: [ testargumentos ]
+  fart:
+    description: fart on a player or yourself.
+    usage: /<Command> [player]
+    aliases: [ cagar, cagarte ]
 permissions:
   myfirstplugin.test:
     description: Test children permission.
