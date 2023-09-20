@@ -1,6 +1,7 @@
 package me.naicriz.myfirstplugin.listeners;
 
 import me.naicriz.myfirstplugin.MyFirstPlugin_MC;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;

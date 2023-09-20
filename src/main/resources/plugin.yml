@@ -11,53 +11,74 @@ commands:
     description: Eutonasia :)
     usage: /<Command>
     aliases: [ morir, suicidio ]
+    permission: myfirstplugin.die
   god:
     description: Te vuelves inmortal.
     usage: /<Command>
     aliases: [ dios, inmortal ]
+    permission: myfirstplugin.god
   feed:
     description: Te alimentas.
     usage: /<Command>
     aliases: [ comer, alimentar ]
+    permission: myfirstplugin.feed
   fairyfly:
     description: Vuelas como una hada.
     usage: /<Command>
     aliases: [ hada, volar ]
+    permission: myfirstplugin.fairyfly
   testperm:
     description: Test children permission.
     usage: /<Command>
     aliases: [ testpermisosychildren ]
+    permission: myfirstplugin.testperm
   cmdargs:
     description: Test command arguments.
     usage: /<Command> <arg1> <arg2> <arg3>
     aliases: [ testargumentos ]
+    permission: myfirstplugin.cmdargs
   fart:
     description: fart on a player or yourself.
     usage: /<Command> [player]
     aliases: [ cagar, cagarte ]
+    permission: myfirstplugin.fart
+  setspawn:
+    description: Set the spawn point.
+    usage: /<Command>
+    aliases: [ setspawnpoint, setspawnpoint ]
+    permission: myfirstplugin.setspawn
+  spawn:
+    description: Teleport to the spawn point.
+    usage: /<Command>
+    aliases: [ spawnpoint ]
+    permission: myfirstplugin.spawn
+
 permissions:
   myfirstplugin.test:
     description: Test children permission.
-    permission: myfirstplugin.test
     default: false
     children:
-      myfirstplugin.die: true
+      myfirstplugin.die: false
       myfirstplugin.god: true
       myfirstplugin.feed: true
       myfirstplugin.fairyfly: true
+      myfirstplugin.setspawn: true
+      myfirstplugin.fart: true
   myfirstplugin.die:
     description: Permite al usuario ejecutar el comando /morir.
-    permission: myfirstplugin.die
     default: op
   myfirstplugin.god:
     description: Permite al usuario ejecutar el comando /dios.
-    permission: myfirstplugin.god
     default: false
   myfirstplugin.feed:
     description: Permite al usuario ejecutar el comando /comer.
-    permission: myfirstplugin.feed
     default: false
   myfirstplugin.fairyfly:
     description: Permite al usuario ejecutar el comando /hada.
-    permission: myfirstplugin.fairyfly
+    default: false
+  myfirstplugin.setspawn:
+    description: Permite al usuario ejecutar el comando /setspawn.
+    default: false
+  myfirstplugin.fart:
+    description: Permite al usuario ejecutar el comando /cagar.
     default: false

@@ -1,12 +1,9 @@
 package me.naicriz.myfirstplugin;
 
 import me.naicriz.myfirstplugin.commands.*;
-import org.bukkit.plugin.java.JavaPlugin;
+import me.naicriz.myfirstplugin.listeners.*;
 
-import me.naicriz.myfirstplugin.listeners.DeathListener;
-import me.naicriz.myfirstplugin.listeners.ShearSheepListener;
-import me.naicriz.myfirstplugin.listeners.PlayerListeners;
-import me.naicriz.myfirstplugin.listeners.XPBottleBreakListener;
+import org.bukkit.plugin.java.JavaPlugin;
 
 /* Methods to register an event listener class to the server plugin manager */
 // 1. static getter method to acces plugin instance.
@@ -22,7 +19,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         plugin = this;
 
         // System.out.println("My first plugin has been initiated!");
-        getLogger().info("MyFirstPlugin has been initiated!");
+        getLogger().info("MyFirstPlugin ha sido inicializado correctamente!");
 
         //config.yml
         getConfig().options().copyDefaults();
@@ -32,7 +29,8 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
-        // This is the second way to register an event listener class to the server plugin manager.
+        getServer().getPluginManager().registerEvents(new SpawnListener(), this);
+        // This is the second way to register an event listener class or any other class to the server plugin manager.
         getServer().getPluginManager().registerEvents(new DeathListener(this), this);
 
         // Registering the command executor class to the server plugin manager, so it can listen to commands and execute the code.
@@ -43,6 +41,8 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("testperm").setExecutor(new TestPermCommand());
         getCommand("cmdargs").setExecutor(new CommandArguments());
         getCommand("fart").setExecutor(new FartCommand());
+        getCommand("setspawn").setExecutor(new SetSpawnCommand());
+        getCommand("spawn").setExecutor(new SpawnCommand());
 
     }
 
@@ -50,7 +50,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("My first plugin has been stopped! Goodbye ;)");
+        getLogger().info("MyFirstPlugin ha sido detenido! Goodbye ;)");
     }
 
 

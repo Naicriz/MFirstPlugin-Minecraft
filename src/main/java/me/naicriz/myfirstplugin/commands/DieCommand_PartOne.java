@@ -13,7 +13,7 @@ public class DieCommand_PartOne implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         // Morir - Mata al jugador que ejecuta el comando.
-        if (command.getName().equalsIgnoreCase("morir")) {
+        if (command.getName().equalsIgnoreCase("die")) {
 
             if (sender instanceof Player player) {
                 player.setHealth(0.0);
