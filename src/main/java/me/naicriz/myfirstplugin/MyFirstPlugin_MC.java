@@ -6,7 +6,7 @@ import me.naicriz.myfirstplugin.listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /* Methods to register an event listener class to the server plugin manager */
-// 1. static getter method to acces plugin instance.
+// 1. static getter method to access plugin instance.
 // 2. constructor injection(using a constructor to pass the plugin instance to the listener class).
 
 public final class MyFirstPlugin_MC extends JavaPlugin {
@@ -43,7 +43,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("fart").setExecutor(new FartCommand());
         getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
-
+        getCommand("set").setExecutor(new SetMessageCommand());
     }
 
 

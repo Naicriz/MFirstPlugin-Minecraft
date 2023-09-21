@@ -1,0 +1,6 @@
+join-message-player: '&aWelcome back to the server &c&l%player%&a. Good to have you back!'
+weapons:
+  - 'Sword of Art'
+  - 'Sword of Death'
+  - 'Sword of Life'
+  - 'Test String'

@@ -16,10 +16,10 @@ public class CommandArguments implements CommandExecutor {
         if (sender instanceof Player player) {
             switch ( args.length ) {
                 case 0 -> player.sendMessage(ChatColor.BOLD + "Sin argumentos proporcionados.\n" + ChatColor.AQUA + ChatColor.BOLD + "/cmdargs <args>");
-                case 1 -> player.sendMessage(ChatColor.BOLD + "Argumento proporcionado: " + ChatColor.BOLD + ChatColor.GOLD + args.length + " " + args[0]);
+                case 1 -> player.sendMessage(ChatColor.GREEN + "Case 1 | " + ChatColor.WHITE + ChatColor.BOLD + "Argumento proporcionado: " + ChatColor.BOLD + ChatColor.GOLD + args.length + " " + args[0]);
                 case 2 -> {
                     String word = args[1];
-                    player.sendMessage( ChatColor.GREEN + "Case 2 | " + ChatColor.WHITE + ChatColor.BOLD + "Argumentos proporcionados: " + ChatColor.BOLD + ChatColor.GOLD + args.length);
+                    player.sendMessage(ChatColor.GREEN + "Case 2 | " + ChatColor.WHITE + ChatColor.BOLD + "Argumentos proporcionados: " + ChatColor.BOLD + ChatColor.GOLD + args.length);
                     player.sendMessage(ChatColor.BOLD + "Argumento: " + ChatColor.BOLD + ChatColor.GOLD + args.length + ChatColor.AQUA + ChatColor.BOLD + word);
                 }
                 case 3 -> {
