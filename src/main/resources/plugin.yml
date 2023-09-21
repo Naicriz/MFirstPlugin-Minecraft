@@ -57,7 +57,6 @@ commands:
     usage: /<Command> <argument> <value>
     aliases: [ set ]
     permission: myfirstplugin.set
-    # add the second argument to the command
     with-args: true
 permissions:
   myfirstplugin.test:
