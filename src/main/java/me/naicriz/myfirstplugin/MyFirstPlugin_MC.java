@@ -3,6 +3,7 @@ package me.naicriz.myfirstplugin;
 import me.naicriz.myfirstplugin.commands.*;
 import me.naicriz.myfirstplugin.listeners.*;
 
+import org.bukkit.command.TabCompleter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /* Methods to register an event listener class to the server plugin manager */
@@ -44,6 +45,8 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("setspawn").setExecutor(new SetSpawnCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
         getCommand("set").setExecutor(new SetMessageCommand());
+        getCommand("setmessage").setExecutor(new SetJoinMessageCommand());
+        getCommand("setmessage").setTabCompleter((TabCompleter) new SetJoinMessageCommand());
     }
 
 

@@ -58,6 +58,18 @@ commands:
     aliases: [ set ]
     permission: myfirstplugin.set
     with-args: true
+  setmessage:
+    description: set the messages on the plugin.
+    usage: /<Command> <argument> <value>
+    aliases: [ setmessage, setmsg ]
+    permission: myfirstplugin.setmessage
+    with-args: true
+    joinmessage:
+      description: set the join message.
+      usage: /<Command> <argument> <value>
+      aliases: [ joinmessage, joinmsg ]
+      permission: myfirstplugin.joinmessage
+      with-args: true
 permissions:
   myfirstplugin.test:
     description: Test children permission.
