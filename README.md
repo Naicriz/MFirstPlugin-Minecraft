@@ -1,7 +1,8 @@
-# MyFirstPlugin | A.K.A. MFP
+# MFirstPlugin | A.K.A. MFP
 
 A Minecraft plugin developed for learning purposes. This plugin is not intended to be used on production servers.
 Only for learning purposes and for fun.
+> NOTE: This code has inefficient ways of developing a proper plugin in a real case scenery. Also it's in spanglish (some things in english and others in spanish. Why? because sometimes I forgot in what language I was currently using 🫥.
 You can check how this plugin was developed by looking at the [commits](https://github.com/Naicriz/MyFirstPlugin-Minecraft/commits/core).
 ---
 ## Commands
