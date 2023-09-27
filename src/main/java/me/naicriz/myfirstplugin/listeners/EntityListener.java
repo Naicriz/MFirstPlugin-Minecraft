@@ -24,14 +24,14 @@ public class EntityListener implements Listener {
 
         if (event.getRightClicked() instanceof Cow cow) {
 
-            cow.setCustomName(ChatColor.RED + "Vaca ESTRESADA");
+            cow.setCustomName(ChatColor.RED + "VACA ESTRESADA");
             cow.setCustomNameVisible(true);
-            player.sendMessage("Está cansada jefe, cansada de tanto luchar...");
-            BukkitTask task =
-            new BukkitRunnable() {
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aVaca: &eEstoy cansada jefe, cansada de tanto luchar..."));
+            BukkitTask task = new BukkitRunnable() {
                 @Override
                 public void run() {
-                    cow.getWorld().createExplosion(cow.getLocation(), 2.5F);
+                    cow.getWorld().createExplosion(cow.getLocation(), 2.0F);
+                    cow.getHurtSound();
                 }
             }.runTaskLater(pluginMFP, 20 * 3); // 20 ticks * 3 seconds
         }

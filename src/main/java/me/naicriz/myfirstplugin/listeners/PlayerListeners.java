@@ -1,5 +1,6 @@
 package me.naicriz.myfirstplugin.listeners;
 
+import me.naicriz.myfirstplugin.MyFirstPlugin_MC;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -10,6 +11,12 @@ import java.util.List;
 import static me.naicriz.myfirstplugin.MyFirstPlugin_MC.getPlugin;
 
 public class PlayerListeners implements Listener {
+
+    private static MyFirstPlugin_MC pluginMFP;
+
+    public PlayerListeners(MyFirstPlugin_MC pluginMFP) {
+        this.pluginMFP = pluginMFP;
+    }
 
     /**
      * Este método está obsoleto y no debe utilizarse directamente.
@@ -23,12 +30,11 @@ public class PlayerListeners implements Listener {
         event.setJoinMessage("Bienvenido al servidor, " + event.getPlayer().getName() + "!");
         onPlayerJoinSteroids(event);
     }*/
-
     @EventHandler
     public void onPlayerJoinSteroids(PlayerJoinEvent event) {
 
         // Se obtiene el mensaje de bienvenida del archivo config.yml
-        String joinMessagePlayer = getPlugin().getConfig().getString("join-message-player");
+        String joinMessagePlayer = pluginMFP.getConfig().getString("join-message-player");
 
         if (joinMessagePlayer != null) {
             joinMessagePlayer = joinMessagePlayer.replace("%player%", event.getPlayer().getDisplayName());

@@ -26,7 +26,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         saveDefaultConfig();
 
         // Registering the event listener class to the server plugin manager, so it can listen to events and execute the code.
-        getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
         getServer().getPluginManager().registerEvents(new SpawnListener(), this);
@@ -35,7 +35,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityListener(this), this);
 
         // Registering the command executor class to the server plugin manager, so it can listen to commands and execute the code.
-        getCommand("die").setExecutor(new DieCommand_PartOne());
+        // getCommand("die")setExecutor(new DieCommand_PartOne());
         getCommand("god").setExecutor(new GodCommand_PartTwo());
         getCommand("feed").setExecutor(new FeedCommand_PartTwo());
         getCommand("fairyfly").setExecutor(new FairyFlyCommand());
@@ -46,8 +46,9 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getCommand("spawn").setExecutor(new SpawnCommand());
         getCommand("set").setExecutor(new SetMessageCommand());
         getCommand("setmessage").setExecutor(new SetJoinMessageCommand());
+        // TabCompleter for the command /setmessage
         getCommand("setmessage").setTabCompleter(new SetJoinMessageCommand());
-
+        //getCommand("cowsad").setExecutor(new CowSadCommand());
 
     }
 
