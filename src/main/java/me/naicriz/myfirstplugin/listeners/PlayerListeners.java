@@ -8,28 +8,19 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.util.List;
 
-import static me.naicriz.myfirstplugin.MyFirstPlugin_MC.getPlugin;
-
 public class PlayerListeners implements Listener {
 
-    private static MyFirstPlugin_MC pluginMFP;
+    private final MyFirstPlugin_MC pluginMFP;
 
     public PlayerListeners(MyFirstPlugin_MC pluginMFP) {
         this.pluginMFP = pluginMFP;
     }
 
     /**
-     * Este método está obsoleto y no debe utilizarse directamente.
-     * Deberías usar el método {@link #onPlayerJoinSteroids(PlayerJoinEvent)} en su lugar.
-     * @param event El evento de un jugador que se unió.
-     * @deprecated Este método está obsoleto. Deberías usar el método {@link #onPlayerJoinSteroids(PlayerJoinEvent)} en su lugar.
+     * <p>This method is used to send a message to a player that joins the server.</p>
+     * @param event The event of a player joining the server.
+     * @return A message to the player that joined the server.
      */
-    /* @Deprecated
-    @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event){
-        event.setJoinMessage("Bienvenido al servidor, " + event.getPlayer().getName() + "!");
-        onPlayerJoinSteroids(event);
-    }*/
     @EventHandler
     public void onPlayerJoinSteroids(PlayerJoinEvent event) {
 
@@ -41,7 +32,7 @@ public class PlayerListeners implements Listener {
             event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', joinMessagePlayer));
         }
 
-        List<String> weapons = getPlugin().getConfig().getStringList("weapons");
+        List<String> weapons = pluginMFP.getConfig().getStringList("weapons");
         for (String weapon : weapons) {
             // event.getPlayer().getInventory().addItem(getPlugin().getItem(weapon));
             event.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', "- " + "&a" + weapon));

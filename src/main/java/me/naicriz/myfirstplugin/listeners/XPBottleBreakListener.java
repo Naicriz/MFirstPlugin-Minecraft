@@ -1,6 +1,5 @@
 package me.naicriz.myfirstplugin.listeners;
 
-import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,7 +15,7 @@ public class XPBottleBreakListener implements Listener {
         event.setExperience(0);
 
         Block block = event.getEntity().getLocation().getBlock();
-        System.out.println(ChatColor.GREEN + "Evento block.  " + block);
+        System.out.println("Evento block >> " + block);
         block.getWorld().createExplosion(block.getLocation(), 2.5F);
     }
 }

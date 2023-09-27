@@ -32,10 +32,10 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SpawnListener(), this);
         // This is the second way to register an event listener class or any other class to the server plugin manager.
         getServer().getPluginManager().registerEvents(new DeathListener(this), this);
-        getServer().getPluginManager().registerEvents(new EntityListener(this), this);
+        getServer().getPluginManager().registerEvents(new EntityListener(), this);
 
         // Registering the command executor class to the server plugin manager, so it can listen to commands and execute the code.
-        // getCommand("die")setExecutor(new DieCommand_PartOne());
+        getCommand("die").setExecutor(new DieCommand_PartOne());
         getCommand("god").setExecutor(new GodCommand_PartTwo());
         getCommand("feed").setExecutor(new FeedCommand_PartTwo());
         getCommand("fairyfly").setExecutor(new FairyFlyCommand());
@@ -52,13 +52,11 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
 
     }
 
-
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         getLogger().info("MyFirstPlugin ha sido detenido! Goodbye ;)");
     }
-
 
     // This method is used to access the instance of the class MyFirstPlugin_MC from other classes.
     public static MyFirstPlugin_MC getPlugin() {
