@@ -26,7 +26,7 @@ public final class MyFirstPlugin_MC extends JavaPlugin {
         saveDefaultConfig();
 
         // Registering the event listener class to the server plugin manager, so it can listen to events and execute the code.
-        getServer().getPluginManager().registerEvents(new PlayerListeners(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getServer().getPluginManager().registerEvents(new XPBottleBreakListener(), this);
         getServer().getPluginManager().registerEvents(new ShearSheepListener(), this);
         getServer().getPluginManager().registerEvents(new SpawnListener(), this);

@@ -22,7 +22,7 @@ public class SetSpawnCommand implements CommandExecutor {
             String worldName = location.getWorld().getName(); // Get the name of the world where the player is.
             // World foundWorld = MyFirstPlugin_MC.getPlugin().getServer().getWorld(WorldName); // Get the world object from the server.
 
-            // 1. Salvar cada valor de la localizacion x,y,z, worldname, etc..
+            // 1. Salvar cada valor de la localization x,y,z, world name, etc...
             // MyFirstPlugin_MC.getPlugin().getConfig().set("spawn.x", location.getX());
             // MyFirstPlugin_MC.getPlugin().getConfig().set("spawn.y", location.getY());
             // MyFirstPlugin_MC.getPlugin().getConfig().set("spawn.z", location.getZ());
