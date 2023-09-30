@@ -4,5 +4,4 @@ import org.bukkit.event.Listener;
 
 public class TabCompleteHandler implements Listener {
 
-    public
 }
